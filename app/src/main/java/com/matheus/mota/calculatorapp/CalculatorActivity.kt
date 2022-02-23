@@ -27,7 +27,7 @@ open class CalculatorActivity : AppCompatActivity() {
         allClicked()
         }
 
-    protected fun allClicked(){
+    private fun allClicked(){
         binding.sumButton.setOnClickListener{
             firstNumber = binding.firstEditText.text.toString()
             secondNumber = binding.secondEditText.text.toString()
@@ -54,7 +54,7 @@ open class CalculatorActivity : AppCompatActivity() {
             binding.secondEditText.text.clear()
         }
     }
-    protected fun sum() {
+    private fun sum() {
         when {
             binding.firstEditText.text.isNotEmpty() && binding.secondEditText.text.isNotEmpty() -> {
                 calculator.firstNumber = firstNumber.toFloat()
@@ -80,7 +80,7 @@ open class CalculatorActivity : AppCompatActivity() {
 
         }
     }
-    protected fun divide() {
+    private fun divide() {
         when {
             binding.firstEditText.text.isNotEmpty() && binding.secondEditText.text.isNotEmpty() -> {
                 calculator.firstNumber = firstNumber.toFloat()
@@ -106,7 +106,7 @@ open class CalculatorActivity : AppCompatActivity() {
 
         }
     }
-    protected fun multiply() {
+    private fun multiply() {
         when {
             binding.firstEditText.text.isNotEmpty() && binding.secondEditText.text.isNotEmpty() -> {
                 calculator.firstNumber = firstNumber.toFloat()
@@ -132,7 +132,7 @@ open class CalculatorActivity : AppCompatActivity() {
 
         }
     }
-    protected fun subtract() {
+    private fun subtract() {
         when {
             binding.firstEditText.text.isNotEmpty() && binding.secondEditText.text.isNotEmpty() -> {
                 calculator.firstNumber = firstNumber.toFloat()
